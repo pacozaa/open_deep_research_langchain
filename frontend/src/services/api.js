@@ -66,8 +66,11 @@ class ResearchAPI {
 
   /**
    * Stream research progress
+   * @param {string} threadId - The thread ID
+   * @param {string} runId - The run ID
+   * @returns {Promise} - Response promise
    */
-  async streamRun(threadId, runId, onUpdate) {
+  async streamRun(threadId, runId) {
     try {
       const response = await this.client.get(
         `/threads/${threadId}/runs/${runId}/stream`,
