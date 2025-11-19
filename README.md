@@ -57,6 +57,35 @@ This will open the LangGraph Studio UI in your browser.
 
 Ask a question in the `messages` input field and click `Submit`. Select different configuration in the "Manage Assistants" tab.
 
+### 🎨 Web Frontend (Alternative)
+
+A modern React-based web interface is also available:
+
+```bash
+# Install frontend dependencies
+cd frontend
+npm install
+
+# Start the frontend development server
+npm run dev
+```
+
+The frontend will be available at `http://localhost:3000` and will connect to the LangGraph backend API.
+
+For production deployment:
+
+```bash
+# Build the frontend
+cd frontend
+npm run build
+
+# Serve the built frontend (optional)
+cd ..
+python src/frontend_server.py
+```
+
+See the [frontend/README.md](frontend/README.md) for more details.
+
 ### ⚙️ Configurations
 
 #### LLM :brain:
